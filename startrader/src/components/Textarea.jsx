@@ -3,6 +3,7 @@ import myTheme from "../theme/theme";
 import { Frame,  } from "arwes";
 import LabelText from "./LabelText";
 import withStyles from "arwes/lib/tools/withStyles";
+
 const styles = (theme) => ({
   container: {
     display: "flex",
