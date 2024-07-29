@@ -1,8 +1,8 @@
 
 FROM node:16 AS build-stage
 
-WORKDIR /dad_jokes_client
-COPY dad_jokes_client/. .
+WORKDIR /star_trader_client
+COPY star_trader_client/. .
 
 # You have to set this because it should be set during build time.
 ARG REACT_APP_BASE_URL
