@@ -1,0 +1,38 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+werkzeug = "==2.3"
+flask = "==2.3.1"
+python-dotenv = "==1.0.0"
+pycodestyle = "==2.11.1"
+rope = "==1.10.0"
+alembic = "==1.12.0"
+sqlalchemy = "==2.0.22"
+flask-sqlalchemy = "==3.1.1"
+flask-migrate = "==4.0.5"
+flask-login = "==0.6.2"
+wtforms = "==3.1.0"
+flask-wtf = "==1.2.1"
+flask-cors = "==4.0.0"
+pyjwt = "==2.8.0"
+blinker = "==1.6.3"
+click = "==8.1.7"
+importlib-metadata = "==6.8.0"
+itsdangerous = "==2.1.2"
+jinja2 = "==3.1.2"
+mako = "==1.2.4"
+markupsafe = "==2.1.3"
+packaging = "==23.2"
+platformdirs = "==3.11.0"
+pytoolconfig = {extras = ["global"], version = "==1.2.6"}
+tomli = "==2.0.1"
+typing-extensions = "==4.8.0"
+zipp = "==3.17.0"
+
+[requires]
+python_version = "3.9"
