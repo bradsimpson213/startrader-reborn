@@ -1,4 +1,4 @@
-from ..models import db, environment, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 # from ..models.transactions import Transaction
 # from ..models.starships import Starship
 from flask_login import UserMixin

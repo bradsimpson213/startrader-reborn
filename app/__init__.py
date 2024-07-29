@@ -1,8 +1,8 @@
-from flask import Flask, request
-# from flask_cors import CORS
+from flask import Flask, request, redirect
 from .config import Config
 from .models import db
 from .routes import users, ships, transactions
+from .seeds import seed_commands
 from flask_migrate import Migrate
 from flask_cors import CORS
 
@@ -14,11 +14,16 @@ app.register_blueprint(users)
 app.register_blueprint(ships)
 app.register_blueprint(transactions)
 
+app.cli.add_command(seed_commands)
+
 db.init_app(app)
 migrate = Migrate(app, db)
 
 # Application Security
 CORS(app)
+
+
+
 @app.before_request
 def https_redirect():
     if os.environ.get('FLASK_ENV') == 'production':

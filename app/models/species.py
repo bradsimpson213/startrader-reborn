@@ -1,4 +1,4 @@
-from ..models import db, environment, SCHEMA
+from .db import db, environment, SCHEMA
 # from ..models.users import User
 
 
