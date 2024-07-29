@@ -32,7 +32,7 @@ RUN pip install -r requirements.txt
 RUN pip install psycopg2
 
 COPY . .
-COPY --from=build-stage /dad_jokes_client/build/* app/static/
+COPY --from=build-stage /star_trader_client/build/* app/static/
 
 RUN flask db upgrade
 CMD gunicorn app:app
