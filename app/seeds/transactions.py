@@ -143,7 +143,7 @@ def seed_transactions():
         )
         
         transaction_18 = Transaction(
-                        buyer=33, 
+                        buyer=28, 
                         seller=32, 
                         starship=18, 
                         sale_price=182575, 
