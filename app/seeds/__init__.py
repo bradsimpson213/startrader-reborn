@@ -19,12 +19,12 @@ def seed():
         # Make sure to add all your other model's undo functions below
         # undo_transactions()
         # undo_starships()
-        # undo_users()
+        undo_users()
         undo_shiptypes()
         undo_species()
     seed_species()
     seed_shiptypes()    
-    # seed_users()
+    seed_users()
     # seed_starships()
     # seed_transactions()
     print("DB SEEDED")
@@ -35,7 +35,7 @@ def seed():
 def undo():
     # undo_transactions()
     # undo_starships()
-    # undo_users()
+    undo_users()
     undo_shiptypes()
     undo_species()
     print("DB DESTROYED")
