@@ -16,10 +16,10 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(100), nullable=False, unique=True)
     hashed_password = db.Column(db.String(100), nullable=False)
     species = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("species.id")), nullable=False)
-    bio = db.Column(db.String(1000))
+    bio = db.Column(db.Text)
     faction = db.Column(db.Boolean, default=False)
     credits = db.Column(db.BigInteger, nullable=False)
-    user_image = db.Column(db.String(150), nullable=False)
+    user_image = db.Column(db.String(250), nullable=False)
     force_points = db.Column(db.Integer, default=0)
 
     starships = db.relationship("Starship", back_populates="user", cascade="all, delete-orphan")
