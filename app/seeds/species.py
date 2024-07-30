@@ -60,7 +60,7 @@ def seed_species():
 # the auto incrementing primary key
 def undo_species():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.species RESTART IDENTITY CASCADE;")
+        db.session.execute(text(f"TRUNCATE table {SCHEMA}.species RESTART IDENTITY CASCADE;"))
     else:
         db.session.execute(text("DELETE FROM species"))
         

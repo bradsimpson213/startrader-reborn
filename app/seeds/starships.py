@@ -239,7 +239,7 @@ def seed_starships():
 # the auto incrementing primary key
 def undo_starships():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.starships RESTART IDENTITY CASCADE;")
+        db.session.execute(text(f"TRUNCATE table {SCHEMA}.starships RESTART IDENTITY CASCADE;"))
     else:
         db.session.execute(text("DELETE FROM starships"))
         

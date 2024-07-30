@@ -477,7 +477,7 @@ def seed_shiptypes():
 # the auto incrementing primary key
 def undo_shiptypes():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.shiptypes RESTART IDENTITY CASCADE;")
+        db.session.execute(text(f"TRUNCATE table {SCHEMA}.shiptypes RESTART IDENTITY CASCADE;"))
     else:
         db.session.execute(text("DELETE FROM shiptypes"))
         
