@@ -16,7 +16,7 @@ def seed_starships():
         )
 
         starship_2 = Starship(
-                        ship_type=29, 
+                        ship_type=4, 
                         custom_name=None, 
                         sale_price=1000000000000, 
                         lightyears_traveled=5, 
