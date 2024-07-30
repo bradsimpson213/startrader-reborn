@@ -1,5 +1,5 @@
 from app.models import db, environment, SCHEMA, Species
-
+from sqlalchemy.sql import text
 
 # Adds a demo user, you can add other users here if you want
 def seed_species():
@@ -31,7 +31,7 @@ def seed_species():
     species_26 = Species(species_type='Kel Dor')
     species_27 = Species(species_type='Chagrian')
     species_28 = Species(species_type='Geonosian')
-    species_29 = Species(species_typ='Mirialan')
+    species_29 = Species(species_type='Mirialan')
     species_30 = Species(species_type='Clawdite')
     species_31 = Species(species_type='Besalisk')
     species_32 = Species(species_type='Kaminoan')
@@ -62,6 +62,6 @@ def undo_species():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.species RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM species")
+        db.session.execute(text("DELETE FROM species"))
         
     db.session.commit()

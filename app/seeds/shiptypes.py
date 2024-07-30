@@ -1,7 +1,7 @@
 from app.models import db, environment, SCHEMA, Shiptype
+from sqlalchemy.sql import text
 
 
-# Adds a demo user, you can add other users here if you want
 def seed_shiptypes():
     shiptype_1 = Shiptype(
                     type_name='CR90 Corvette', 
@@ -292,7 +292,7 @@ def seed_shiptypes():
     )
        
     shiptype_18 = Shiptype(   
-                    type_name+'B-wing', 
+                    type_name='B-wing', 
                     starship_class='Starfighter', 
                     manufacturer='Slayn & Korpil', 
                     model='A/SF-01 B-wing Starfighter', 
@@ -479,6 +479,6 @@ def undo_shiptypes():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.shiptypes RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM shiptypes")
+        db.session.execute(text("DELETE FROM shiptypes"))
         
     db.session.commit()

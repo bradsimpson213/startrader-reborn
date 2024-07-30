@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
     name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(100), nullable=False, unique=True)
     hashed_password = db.Column(db.String(100), nullable=False)
-    species = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("species.id"), nullable=False))
+    species = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("species.id")), nullable=False)
     bio = db.Column(db.String(1000))
     faction = db.Column(db.Boolean, default=False)
     credits = db.Column(db.BigInteger, nullable=False)

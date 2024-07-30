@@ -35,6 +35,7 @@ COPY . .
 COPY --from=build-stage /star_trader_client/build/* app/static/
 
 RUN flask db upgrade
+RUN flask seed all
 CMD gunicorn app:app
 
 

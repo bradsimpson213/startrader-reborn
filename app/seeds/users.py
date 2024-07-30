@@ -1,7 +1,8 @@
 from app.models import db, User, environment, SCHEMA
 from werkzeug.security import generate_password_hash
+from sqlalchemy.sql import text
 
-# Adds a demo user, you can add other users here if you want
+
 def seed_users():
     user_1 = User(
                 name='Luke Skywalker', 
@@ -232,7 +233,7 @@ def seed_users():
     )
           
     user_20 = User(      
-                nam='Yoda', 
+                name='Yoda', 
                 email='yoda@force.net', 
                 hashed_password=generate_password_hash('thereisnotry'), 
                 species=6, 
@@ -399,9 +400,9 @@ def seed_users():
                 force_points=0,
     )
           
-    all_users = [user_1, user_2, user_, user_4, user_5, user_6, user_7, user_8, user_9, user_10,
-                 user_11, user_12, user_13, user_14, user_15, user_16, user_17,user_18, user_19.
-                 user_20, user_21, user_22, user_23, user_24,user_25, user_26, user_27, user_28,
+    all_users = [user_1, user_2, user_3, user_4, user_5, user_6, user_7, user_8, user_9, user_10,
+                 user_11, user_12, user_13, user_14, user_15, user_16, user_17, user_18, user_19,
+                 user_20, user_21, user_22, user_23, user_24, user_25, user_26, user_27, user_28,
                  user_29, user_30, user_31, user_32 ]
 
     _ = [db.session.add(user) for user in all_users]
@@ -415,6 +416,6 @@ def undo_users():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM users")
+        db.session.execute(text("DELETE FROM users"))
         
     db.session.commit()

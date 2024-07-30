@@ -9,18 +9,16 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 app.config.from_object(Config)
+db.init_app(app)
+Migrate(app, db)
+app.cli.add_command(seed_commands)
 
 app.register_blueprint(users)
 app.register_blueprint(ships)
 app.register_blueprint(transactions)
 
-app.cli.add_command(seed_commands)
-
-db.init_app(app)
-migrate = Migrate(app, db)
-
 # Application Security
-CORS(app)
+CORS(app)               
 
 
 
