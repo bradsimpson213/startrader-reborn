@@ -376,34 +376,34 @@ def seed_users():
                 force_points=0,
     )
     
-    # user_31 = User(
-    #             name='Qui-Gon Jinn', 
-    #             email='quigon@force.net', 
-    #             hashed_password=generate_password_hash('jedi4life'), 
-    #             species=1, 
-    #             bio="A venerable if maverick Jedi Master, Qui-Gon Jinn was a student of the living Force. Qui-Gon lived for the moment, espousing a philosophy of 'feel, don't think -- use your instincts.' On Tatooine, Qui-Gon discovered a young slave boy named Anakin Skywalker who was strong in the Force. Sensing the boy's potential, Qui-Gon liberated Anakin from slavery.",
-    #             faction=True, 
-    #             credits=555000, 
-    #             user_image='https://starwars-trader-imgs.s3.us-east-2.amazonaws.com/img/characters/32.jpg', 
-    #             force_points=0,
-    # )
+    user_31 = User(
+                name='Qui-Gon Jinn', 
+                email='quigon@force.net', 
+                hashed_password=generate_password_hash('jedi4life'), 
+                species=1, 
+                bio="A venerable if maverick Jedi Master, Qui-Gon Jinn was a student of the living Force. Qui-Gon lived for the moment, espousing a philosophy of 'feel, don't think -- use your instincts.' On Tatooine, Qui-Gon discovered a young slave boy named Anakin Skywalker who was strong in the Force. Sensing the boy's potential, Qui-Gon liberated Anakin from slavery.",
+                faction=True, 
+                credits=555000, 
+                user_image='https://starwars-trader-imgs.s3.us-east-2.amazonaws.com/img/characters/32.jpg', 
+                force_points=0,
+    )
     
-    # user_32 = User(
-    #             name='Watto', 
-    #             email='watto@ibuyjunk.org', 
-    #             hashed_password=generate_password_hash('nubian'), 
-    #             species=13, 
-    #             bio="Watto was a Toydarian junk dealer in Mos Espa who bought Shmi Skywalker and her son Anakin from Gardulla the Hutt. An inveterate gambler, he sponsored Anakin in several Podraces, but often bet against his own slave, who was talented but inexperienced.",
-    #             faction=True, 
-    #             credits=237000, 
-    #             user_image='https://starwars-trader-imgs.s3.us-east-2.amazonaws.com/img/characters/40.jpg', 
-    #             force_points=0,
-    # )
+    user_32 = User(
+                name='Watto', 
+                email='watto@ibuyjunk.org', 
+                hashed_password=generate_password_hash('nubian'), 
+                species=13, 
+                bio="Watto was a Toydarian junk dealer in Mos Espa who bought Shmi Skywalker and her son Anakin from Gardulla the Hutt. An inveterate gambler, he sponsored Anakin in several Podraces, but often bet against his own slave, who was talented but inexperienced.",
+                faction=True, 
+                credits=237000, 
+                user_image='https://starwars-trader-imgs.s3.us-east-2.amazonaws.com/img/characters/40.jpg', 
+                force_points=0,
+    )
           
     all_users = [user_1, user_2, user_3, user_4, user_5, user_6, user_7, user_8, user_9, user_10,
                  user_11, user_12, user_13, user_14, user_15, user_16, user_17, user_18, user_19,
                  user_20, user_21, user_22, user_23, user_24, user_25, user_26, user_27, user_28,
-                 user_29, user_30, user_31 ]
+                 user_29, user_30, user_31, user_32 ]
 
     _ = [db.session.add(user) for user in all_users]
     db.session.commit()
