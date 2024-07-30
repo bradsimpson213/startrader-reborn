@@ -376,17 +376,17 @@ def seed_users():
                 force_points=0,
     )
     
-    user_31 = User(
-                name='Qui-Gon Jinn', 
-                email='quigon@force.net', 
-                hashed_password=generate_password_hash('jedi4life'), 
-                species=1, 
-                bio="A venerable if maverick Jedi Master, Qui-Gon Jinn was a student of the living Force. Qui-Gon lived for the moment, espousing a philosophy of 'feel, don't think -- use your instincts.' On Tatooine, Qui-Gon discovered a young slave boy named Anakin Skywalker who was strong in the Force. Sensing the boy's potential, Qui-Gon liberated Anakin from slavery.",
-                faction=True, 
-                credits=555000, 
-                user_image='https://starwars-trader-imgs.s3.us-east-2.amazonaws.com/img/characters/32.jpg', 
-                force_points=0,
-    )
+    # user_31 = User(
+    #             name='Qui-Gon Jinn', 
+    #             email='quigon@force.net', 
+    #             hashed_password=generate_password_hash('jedi4life'), 
+    #             species=1, 
+    #             bio="A venerable if maverick Jedi Master, Qui-Gon Jinn was a student of the living Force. Qui-Gon lived for the moment, espousing a philosophy of 'feel, don't think -- use your instincts.' On Tatooine, Qui-Gon discovered a young slave boy named Anakin Skywalker who was strong in the Force. Sensing the boy's potential, Qui-Gon liberated Anakin from slavery.",
+    #             faction=True, 
+    #             credits=555000, 
+    #             user_image='https://starwars-trader-imgs.s3.us-east-2.amazonaws.com/img/characters/32.jpg', 
+    #             force_points=0,
+    # )
     
     # user_32 = User(
     #             name='Watto', 
