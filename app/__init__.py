@@ -5,6 +5,7 @@ from .routes import users, ships, transactions
 from .seeds import seed_commands
 from flask_migrate import Migrate
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 
