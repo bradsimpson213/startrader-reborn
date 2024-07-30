@@ -57,7 +57,7 @@ const  Foot = withStyles(styles)(({classes}) =>{
             <p style={style.footerContent.about}>
               Made with great force focus by{" "}
               <Link
-                href="https://bradsimpson213.github.io/bradsimpson/"
+                href="https://brad-simpson-website.herokuapp.com/"
                 target="_blank"
               >
                 Brad Simpson
