@@ -48,7 +48,7 @@ const  Foot = withStyles(styles)(({classes}) =>{
           </span>
           <span style={style.footerContent}>
             <Link
-              href="https://github.com/bpmutter/sw-trader-frontend"
+              href="https://github.com/bradsimpson213/startrader-reborn"
               target="_blank"
               style={style.footerContent.githubIcon}
             >
